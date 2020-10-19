@@ -4,12 +4,6 @@ on init
     setprop persist.vendor.mtk.volte.enable 0
     setprop persist.vendor.mtk_ct_volte_support 0
 
-    # bind mount libmtk-ril.so
-    mount none /system/lib64/libmtk-ril.so /vendor/lib64/libmtk-ril.so bind
-
-on post-fs
-	mount none /system/etc/usb_audio_policy_configuration.xml /vendor/etc/usb_audio_policy_configuration.xml bind
-
 on boot
 
     # Touchscreen/DT2W
